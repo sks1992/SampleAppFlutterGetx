@@ -31,7 +31,7 @@ class SampleApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sample App',
       getPages: AppRoute.route,
-      initialRoute: RouteNames.splash,
+      initialRoute: RouteNames.login,
       defaultTransition: Transition.cupertino,
       initialBinding: AuthBinding(),
       theme: ThemeData(

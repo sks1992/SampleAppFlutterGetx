@@ -6,7 +6,7 @@ import '../../formats.dart';
 
 class LoginScreenController extends GetxController
     with StateMixin<UserResponse> {
-  late TextEditingController username;
+  late TextEditingController email;
   late TextEditingController password;
 
   var showProgress = false.obs;
@@ -14,14 +14,14 @@ class LoginScreenController extends GetxController
 
   @override
   void onInit() {
-    username = TextEditingController();
+    email = TextEditingController();
     password = TextEditingController();
     super.onInit();
   }
 
   @override
   void onClose() {
-    username.dispose();
+    email.dispose();
     password.dispose();
 
     super.onClose();
@@ -29,11 +29,11 @@ class LoginScreenController extends GetxController
 
 
   Future login() async {
-    final userName = username.text;
+    final userName = email.text;
     final passWord = password.text;
 
     if (userName.isEmpty) {
-      showMessageDialog('User name is required');
+      showMessageDialog('Email is required');
       return;
     }
     if (passWord.isEmpty) {

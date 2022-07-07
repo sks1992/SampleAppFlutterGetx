@@ -6,8 +6,8 @@ import '../../formats.dart';
 import '../widgets/circle_progress_indicator.dart';
 import '../widgets/text_field_new.dart';
 
-class LoginPage extends StatelessWidget {
-  LoginPage({Key? key}) : super(key: key);
+class LoginPageScreen extends StatelessWidget {
+  LoginPageScreen({Key? key}) : super(key: key);
 
   final LoginScreenController loginController =
       Get.put(LoginScreenController());
@@ -28,11 +28,11 @@ class LoginPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset("assets/images/jfl_logo_green.png"),
                 TextFieldNew(
-                  textEditingController: loginController.username,
-                  assetName: "assets/images/icon_username.png",
-                  hintText: 'User Name',
+                  textEditingController: loginController.email,
+                  assetName: "assets/images/email_icon.png",
+                  hintText: 'Email',
+                  obscureText: true,
                 ),
                 TextFieldNew(
                   textEditingController: loginController.password,

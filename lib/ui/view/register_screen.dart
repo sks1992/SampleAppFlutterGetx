@@ -6,8 +6,8 @@ import '../../formats.dart';
 import '../widgets/circle_progress_indicator.dart';
 import '../widgets/text_field_new.dart';
 
-class RegisterPage extends StatelessWidget {
-  RegisterPage({Key? key}) : super(key: key);
+class RegisterPageScreen extends StatelessWidget {
+  RegisterPageScreen({Key? key}) : super(key: key);
 
   final RegisterControllerController registerController =
       Get.put(RegisterControllerController());
@@ -28,7 +28,6 @@ class RegisterPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset("assets/images/jfl_logo_green.png"),
                 TextFieldNew(
                   textEditingController: registerController.username,
                   assetName: "assets/images/icon_username.png",
@@ -36,8 +35,8 @@ class RegisterPage extends StatelessWidget {
                 ),
                 TextFieldNew(
                   textEditingController: registerController.password,
-                  assetName: "assets/images/icon_pin.png",
-                  hintText: 'Password',
+                  assetName: "assets/images/email_icon.png",
+                  hintText: 'Email',
                   obscureText: true,
                 ),
                 TextFieldNew(

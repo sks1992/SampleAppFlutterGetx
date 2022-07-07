@@ -37,7 +37,7 @@ dependencies:
   flutter_spinkit: ^5.1.0 # progress indicators package
   get: ^4.6.5 # state management, dependency injection, route management
   intl: "^0.17.0" # date and number formats
-
+  flutter_secure_storage: ^5.0.2 # for shared preferences
 
 dev_dependencies:
   flutter_test:
